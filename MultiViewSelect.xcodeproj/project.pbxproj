@@ -10,10 +10,10 @@
 		EFAD413B1A24B3DA00C3CAB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD413A1A24B3DA00C3CAB0 /* main.m */; };
 		EFAD413E1A24B3DA00C3CAB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD413D1A24B3DA00C3CAB0 /* AppDelegate.m */; };
 		EFAD41411A24B3DA00C3CAB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD41401A24B3DA00C3CAB0 /* ViewController.m */; };
-		EFAD41441A24B3DA00C3CAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFAD41421A24B3DA00C3CAB0 /* Main.storyboard */; };
-		EFAD41461A24B3DA00C3CAB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAD41451A24B3DA00C3CAB0 /* Images.xcassets */; };
-		EFAD41491A24B3DA00C3CAB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFAD41471A24B3DA00C3CAB0 /* LaunchScreen.xib */; };
 		EFAD41551A24B3DA00C3CAB0 /* MultiViewSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD41541A24B3DA00C3CAB0 /* MultiViewSelectTests.m */; };
+		EFAD41601A24B50500C3CAB0 /* MultiWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD415F1A24B50500C3CAB0 /* MultiWindowView.m */; };
+		EFAD41621A24B8AA00C3CAB0 /* tmp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFAD41611A24B8AA00C3CAB0 /* tmp.jpg */; };
+		EFAD41641A24BE4E00C3CAB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFAD41631A24BE4E00C3CAB0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,13 @@
 		EFAD413D1A24B3DA00C3CAB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EFAD413F1A24B3DA00C3CAB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EFAD41401A24B3DA00C3CAB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EFAD41431A24B3DA00C3CAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EFAD41451A24B3DA00C3CAB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EFAD41481A24B3DA00C3CAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EFAD414E1A24B3DA00C3CAB0 /* MultiViewSelectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiViewSelectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD41531A24B3DA00C3CAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFAD41541A24B3DA00C3CAB0 /* MultiViewSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiViewSelectTests.m; sourceTree = "<group>"; };
+		EFAD415E1A24B50500C3CAB0 /* MultiWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiWindowView.h; sourceTree = "<group>"; };
+		EFAD415F1A24B50500C3CAB0 /* MultiWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiWindowView.m; sourceTree = "<group>"; };
+		EFAD41611A24B8AA00C3CAB0 /* tmp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmp.jpg; sourceTree = "<group>"; };
+		EFAD41631A24BE4E00C3CAB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +82,13 @@
 		EFAD41371A24B3DA00C3CAB0 /* MultiViewSelect */ = {
 			isa = PBXGroup;
 			children = (
+				EFAD415E1A24B50500C3CAB0 /* MultiWindowView.h */,
+				EFAD415F1A24B50500C3CAB0 /* MultiWindowView.m */,
 				EFAD413C1A24B3DA00C3CAB0 /* AppDelegate.h */,
 				EFAD413D1A24B3DA00C3CAB0 /* AppDelegate.m */,
 				EFAD413F1A24B3DA00C3CAB0 /* ViewController.h */,
 				EFAD41401A24B3DA00C3CAB0 /* ViewController.m */,
-				EFAD41421A24B3DA00C3CAB0 /* Main.storyboard */,
-				EFAD41451A24B3DA00C3CAB0 /* Images.xcassets */,
-				EFAD41471A24B3DA00C3CAB0 /* LaunchScreen.xib */,
+				EFAD41631A24BE4E00C3CAB0 /* Images.xcassets */,
 				EFAD41381A24B3DA00C3CAB0 /* Supporting Files */,
 			);
 			path = MultiViewSelect;
@@ -96,6 +97,7 @@
 		EFAD41381A24B3DA00C3CAB0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFAD41611A24B8AA00C3CAB0 /* tmp.jpg */,
 				EFAD41391A24B3DA00C3CAB0 /* Info.plist */,
 				EFAD413A1A24B3DA00C3CAB0 /* main.m */,
 			);
@@ -199,9 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFAD41441A24B3DA00C3CAB0 /* Main.storyboard in Resources */,
-				EFAD41491A24B3DA00C3CAB0 /* LaunchScreen.xib in Resources */,
-				EFAD41461A24B3DA00C3CAB0 /* Images.xcassets in Resources */,
+				EFAD41621A24B8AA00C3CAB0 /* tmp.jpg in Resources */,
+				EFAD41641A24BE4E00C3CAB0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +222,7 @@
 			files = (
 				EFAD41411A24B3DA00C3CAB0 /* ViewController.m in Sources */,
 				EFAD413E1A24B3DA00C3CAB0 /* AppDelegate.m in Sources */,
+				EFAD41601A24B50500C3CAB0 /* MultiWindowView.m in Sources */,
 				EFAD413B1A24B3DA00C3CAB0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +244,6 @@
 			targetProxy = EFAD414F1A24B3DA00C3CAB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EFAD41421A24B3DA00C3CAB0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFAD41431A24B3DA00C3CAB0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EFAD41471A24B3DA00C3CAB0 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFAD41481A24B3DA00C3CAB0 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EFAD41561A24B3DA00C3CAB0 /* Debug */ = {
@@ -343,9 +326,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MultiViewSelect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,9 +339,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = MultiViewSelect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

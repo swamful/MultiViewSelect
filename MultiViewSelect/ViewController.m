@@ -13,15 +13,30 @@
 @end
 
 @implementation ViewController
-
+@synthesize multiWindowView = _multiWindowView;
+@synthesize logLabel = _logLabel;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.multiWindowView = [[MultiWindowView alloc] initWithFrame:self.view.bounds];
+    self.multiWindowView.delegate = self;
+    [self.multiWindowView setImgList:[self tmpImgList]];
+    [self.view addSubview:self.multiWindowView];
+    
+    self.logLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 30, 30)];
+    [self.view addSubview:self.logLabel];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -MultiWindowViewDelegate
+- (void) selectViewWithIndex:(NSInteger)index {
+    [self.logLabel setText:[NSString stringWithFormat:@"%d", index]];
+}
+
+- (NSMutableArray *) tmpImgList {
+    NSMutableArray *tmpList = [NSMutableArray array];
+    for (int i = 0; i < 25; i++) {
+        [tmpList addObject:[UIImage imageNamed:@"tmp.jpg"]];
+    }
+    return tmpList;
 }
 
 @end

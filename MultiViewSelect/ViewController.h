@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MultiWindowView.h"
+@interface ViewController : UIViewController <MultiWindowViewDelegate>
 
-@interface ViewController : UIViewController
 
-
+@property (nonatomic) MultiWindowView *multiWindowView;
+@property (nonatomic) UILabel *logLabel;
 @end
 
