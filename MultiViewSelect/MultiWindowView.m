@@ -197,24 +197,19 @@ const float twistedRate=0.011;
 
         CGFloat firstLayerZGap = [self getZGap:[[_btnImgList objectAtIndex:0] layer]];
         CGFloat finalLayerZGap = [self getZGap:[[_btnImgList lastObject] layer]];
-        if (firstLayerZGap < 0 || finalLayerZGap > 0) {
-            hypotenuse *= 0.1;
+        if (firstLayerZGap - hypotenuse < 0 || finalLayerZGap - hypotenuse > 0) {
+            if (firstLayerZGap < 0 || finalLayerZGap > 0) {
+                hypotenuse *= 0.5;
+            }
+            hypotenuse *= 0.5;
         }
-//        NSLog(@"firstLayerZGap : %f", firstLayerZGap);
-//        NSLog(@"finalLayerZgap : %f", finalLayerZGap);
-//        NSLog(@"firstLayerZGap - hypotenuse : %f", firstLayerZGap - hypotenuse);
-//        NSLog(@"finalLayerZGap - hypotenuse : %f", finalLayerZGap - hypotenuse);
-        if (firstLayerZGap - hypotenuse > 0) {
-//            hypotenuse = firstLayerZGap + hypotenuse;
-        } else if (finalLayerZGap - hypotenuse < 0) {
-//            hypotenuse = finalLayerZGap;
-        }
-
+//        
+//        NSLog(@"hypotenuse : %f", hypotenuse);
         [UIView animateWithDuration:MIN(0.3, fabs(hypotenuse) * 0.0008) delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             for (int i =0 ; i < [self.btnImgList count]; i ++) {
                 
                 CALayer *layer = [[self.btnImgList objectAtIndex:i] layer];
-                layer.transform = CATransform3DTranslate(layer.transform, 0, 0, -hypotenuse);
+                layer.transform = CATransform3DTranslate(layer.transform, 0, 0, -hypotenuse);                
                 layer.position = CGPointMake(self.center.x - pow([self getZGap:layer] * twistedRate, 2) + [self margin], layer.position.y);
             }
         } completion:^(BOOL finished){
@@ -275,7 +270,7 @@ const float twistedRate=0.011;
 
 - (void) animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     NSString *value = [anim valueForKey:@"animation"];
-    if ([value isEqualToString:[NSString stringWithFormat:@"moving%u",([self.btnImgList count]-1)]]) {
+    if ([value isEqualToString:[NSString stringWithFormat:@"moving%lu",([self.btnImgList count]-1)]]) {
         //        [self checkSelectedLayer];
     }
 }

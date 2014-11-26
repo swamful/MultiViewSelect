@@ -28,7 +28,7 @@
 
 #pragma mark -MultiWindowViewDelegate
 - (void) selectViewWithIndex:(NSInteger)index {
-    [self.logLabel setText:[NSString stringWithFormat:@"%d", index]];
+    [self.logLabel setText:[NSString stringWithFormat:@"%ld", (long)index]];
 }
 
 - (NSMutableArray *) tmpImgList {
